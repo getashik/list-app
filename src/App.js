@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import AwsList from './components/AwsList';
 import {GetList} from './actions/awsList';
+import AddUser from "./components/AddUser";
 import './App.css';
 
 class Myname extends Component{
@@ -21,6 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header >
+          <AddUser></AddUser>
           <AwsList></AwsList>
           <button onClick={()=>{this.loadAwsData()}} >Get List</button>
         </header>
