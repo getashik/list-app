@@ -34,7 +34,7 @@ export const GetList = function () {
 export const PushUser = function (data) {
     
     return function(dispatch){
-    fetch("/put",
+    fetch("http://localhost:3030/put",
     {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
