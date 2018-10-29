@@ -1,7 +1,7 @@
 export const GetList = function () {
     
     return function(dispatch){
-    fetch("/get")
+    fetch("http://ec2-52-43-107-155.us-west-2.compute.amazonaws.com:3030/get")
       .then(res => res.json())
       .then(
         (result) => {

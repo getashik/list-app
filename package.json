@@ -25,6 +25,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "proxy":"http://ec2-52-43-107-155.us-west-2.compute.amazonaws.com:3030"
+  ]
 }
