@@ -1,7 +1,7 @@
+const APIURL=process.env.REACT_APP_API_URL;
 export const GetList = function () {
-    
     return function(dispatch){
-    fetch("http://ec2-52-43-107-155.us-west-2.compute.amazonaws.com:3030/get")
+    fetch(`${APIURL}/get`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ export const GetList = function () {
 export const PushUser = function (data) {
     
     return function(dispatch){
-    fetch("http://localhost:3030/put",
+    fetch(`${APIURL}/put`,
     {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
@@ -67,7 +67,7 @@ export const PushUser = function (data) {
 export const DeleteUser = function (data) {
     
   return function(dispatch){
-  fetch("/delete",
+  fetch(`${APIURL}/delete`,
   {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(data), // data can be `string` or {object}!
