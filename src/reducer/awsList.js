@@ -4,8 +4,7 @@ export const awsReducer = (state=[{userName:"Ashik"}],action) => {
 
         case "GETAWSLIST":
          return Object.assign([],action.payLoad);
-        break;
-        default:
+         default:
         return state;
        
 

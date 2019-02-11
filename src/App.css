@@ -34,3 +34,4 @@ ul{ list-style: none; }
 ul li{ border: 1px solid #eeeeee; margin: 5px;padding: 5px; }
 ul li button{  float: right; }
 li input{ margin: 0 2px;}
+ul.Menu{display: flex}

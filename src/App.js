@@ -3,16 +3,19 @@ import { connect } from 'react-redux'
 import AwsList from './components/AwsList';
 import {GetList} from './actions/awsList';
 import AddUser from "./components/AddUser";
+
 import './App.css';
 
-class Myname extends Component{
- render(){
-  return(<div>Ashik</div>);
-}
-}
+
+
 
 
 class App extends Component {
+
+componentDidMount(){
+  this.loadAwsData();
+}
+
  loadAwsData(){
 
   this.props.dispatch(GetList());
@@ -24,8 +27,10 @@ class App extends Component {
         <header >
           <AddUser></AddUser>
           <AwsList></AwsList>
+          
           <button onClick={()=>{this.loadAwsData()}} >Get List</button>
         </header>
+        
       </div>
     );
   }

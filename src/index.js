@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import {Provider} from  'react-redux';
 import { createStore,applyMiddleware }  from 'redux';
 import * as serviceWorker from './serviceWorker';
 import ListApp  from "./reducer/index";
 import thunk from 'redux-thunk'; 
+import Navigation from "./components/navigation";
 
 let store=createStore(ListApp,applyMiddleware(thunk));
 
+
+   
+
+
 ReactDOM.render(
      <Provider store = {store}> 
-     <App />
+     <Navigation />
      </Provider>
      , document.getElementById('root'));
 

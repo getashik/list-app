@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import {DeleteUser} from '../actions/awsList';
 
 class Row extends Component{
-
     constructor(props){
+        
         super(props);
-        this.state={edit:false};
+        this.state = {edit:false};
     }
 
     delItem(){
@@ -17,12 +17,7 @@ class Row extends Component{
         this.setState({edit:true})
     }
     pressSaveItem(){
-        var obj={
-            "userName":this.refs.userName.value,
-            "email":this.refs.email.value,
-            "id":this.props.id,
-
-        }
+       
      }
     inputChange(e,fld){
     alert(e.target.value);
